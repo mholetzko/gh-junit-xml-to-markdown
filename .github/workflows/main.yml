@@ -12,19 +12,9 @@ jobs:
         uses: ./
         with:
           path_to_junit_xml: "./data/result.xml"
-          upload_to_wiki: "false"
-      # Check the output
-      - name: get result value
-        run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
-      # Cat the output
-      - name: Cat result file
-        run: ls -al /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown
-        # Cat the output
-      - name: Cat result file
-        run: cat /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/converted.md
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          path: /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/converted.md
+          path: /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/${{ steps.convert.outputs.path_to_generated_md }}
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GPAT_PRIVATE }}
