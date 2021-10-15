@@ -7,13 +7,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Fetch xml convert 2 md
         id: convert
         uses: ./
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
-          output_name: "result_123.md"
+          output_name: "result_${{ steps.date.outputs.date }}.md"
       - name: Check outdir
         run: ls -al ./out
       - name: Upload Documentation to Wiki
