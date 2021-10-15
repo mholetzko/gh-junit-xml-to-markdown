@@ -10,6 +10,9 @@ inputs:
     description: "Shall the action upload to the repo.wiki"
     required: false
     default: "false"
+outputs:
+  path-to-generated-md:
+    description: "The path to the generated markdown file"
 
 runs:
   using: "docker"

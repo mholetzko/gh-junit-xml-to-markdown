@@ -20,8 +20,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Fetch xml convert 2 md
-        id: hello
+        id: convert
         uses: ./
         with:
-          path-to-junit-xml: "Here"
+          path-to-junit-xml: "./data/result.xml"
           upload-to-wiki: "true"
+      # Check the output
+      - name: Get the output time
+        run: echo "The time was ${{ steps.convert.outputs.path-to-generated-md }}"

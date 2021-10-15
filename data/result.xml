@@ -1,0 +1,54 @@
+<testsuites>
+	<testsuite id="1" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/businessPartner/visit_flow.spec" time="7.614" timestamp="2021-10-15T12:48:20" name="Business Partner: page visit flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Business Partner: page visit flow" name="From Dashboard page to Business Partners page" time="1.513"></testcase>
+		<testcase classname="Business Partner: page visit flow" name="From Business Partners page to a specific Business Partner" time="1.714"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="2" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/invoices/visit_flow.spec" time="7.303" timestamp="2021-10-15T12:48:20" name="Invoices: page visit flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Invoices: page visit flow" name="From Dashboard page to Invoices page" time="1.391"></testcase>
+		<testcase classname="Invoices: page visit flow" name="From Invoices page to a specific Invoice page" time="1.797"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="3" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/items/visit_flow.spec" time="6.392" timestamp="2021-10-15T12:48:20" name="Items: page visit flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Items: page visit flow" name="From Dashboard page to Items page" time="1.101"></testcase>
+		<testcase classname="Items: page visit flow" name="From Items page to a specific Item page" time="1.097"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="4" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/journalEntries/visit_flow.spec" time="6.976" timestamp="2021-10-15T12:48:20" name="Journal Entries: page visit flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Journal Entries: page visit flow" name="From Dashboard page to Journal Entries page" time="1.284"></testcase>
+		<testcase classname="Journal Entries: page visit flow" name="From Journal Entries page to a specific Journal Entry" time="1.403"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="5" tests="5" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/salesArrangements/visit_flow.spec" time="24.986" timestamp="2021-10-15T12:48:20" name="Sales Arrangements: page visit flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Sales Arrangements: page visit flow" name="From Dashboard page to Sales Arrangements page" time="1.387"></testcase>
+		<testcase classname="Sales Arrangements: page visit flow" name="From Sales Arrangements page to Sale Arrangements Detail page and check Overview tab" time="4.929"></testcase>
+		<testcase classname="Sales Arrangements: page visit flow" name="From Sales Arrangements page to Sale Arrangements Detail page and check Ordered Items tab" time="4.709"></testcase>
+		<testcase classname="Sales Arrangements: page visit flow" name="From Sales Arrangements page to Sale Arrangements Detail page and check Revenue tab" time="4.949"></testcase>
+		<testcase classname="Sales Arrangements: page visit flow" name="From Sales Arrangements page to Sale Arrangements Detail page and check Billing tab" time="4.751"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="6" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/businessPartner/create_flow.spec" time="74.824" timestamp="2021-10-15T12:48:20" name="Business Partner: page create flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Business Partner: page create flow" name="Create new Business Partner from Business Partners page with all information" time="46.212"></testcase>
+		<testcase classname="Business Partner: page create flow" name="Create a new Business Partner which has the same Billing Address and Shipping Address" time="24.306"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+	<testsuite id="7" tests="2" failures="0" package="/home/runner/work/e2e-tests/e2e-tests/everest.fin.accounting/specs/businessPartner/revise_flow.spec" time="111.579" timestamp="2021-10-15T12:48:20" name="Business Partner: page revise flow" errors="0" hostname="fv-az202-607">
+		<properties></properties>
+		<testcase classname="Business Partner: page revise flow" name="Revise all Business Partner information" time="62.098"></testcase>
+		<testcase classname="Business Partner: page revise flow" name="Revise Business Partner information to have the same Billing Address and Shipping Address" time="45.271"></testcase>
+		<system-out></system-out>
+		<system-err></system-err>
+	</testsuite>
+</testsuites>
