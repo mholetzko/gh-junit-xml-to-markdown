@@ -7,5 +7,7 @@ source /app/env/bin/activate && python3 src/convert_junit_to_md.py $1 TESTRUN-12
 ls -al
 pwd
 cat converted.md
-echo "::set-output name=path_to_generated_md::conterved.md"
+
+out="converted.md"
+echo "::set-output name=path_to_generated_md::$out"
 
