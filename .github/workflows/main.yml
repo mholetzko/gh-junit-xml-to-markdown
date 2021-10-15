@@ -13,6 +13,7 @@ jobs:
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
+          output_name": "result_123"
       - name: PWD
         run: pwd
       - name: LS -AL
