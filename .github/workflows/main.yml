@@ -22,24 +22,9 @@ jobs:
         # Cat the output
       - name: Cat result file
         run: cat /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/converted.md
-  upload-config:
-    runs-on: ubuntu-latest
-    name: A job to test xml2md conversion
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Fetch xml convert 2 md
-        id: convert
-        uses: ./
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          path_to_junit_xml: "./data/result.xml"
-          upload_to_wiki: "true"
-      # Check the output
-      - name: get result value
-        run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
-      # Cat the output
-      - name: Cat result file
-        run: ls -al /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown
-        # Cat the output
-      - name: Cat result file
-        run: cat /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/converted.md
+          path: /home/runner/work/gh-junit-xml-to-markdown/gh-junit-xml-to-markdown/converted.md
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GPAT_PRIVATE }}
