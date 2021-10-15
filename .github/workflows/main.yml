@@ -24,4 +24,4 @@ jobs:
         uses: ./
         with:
           path-to-junit-xml: "Here"
-          upload-to-wiki: "false"
+          upload-to-wiki: "true"
