@@ -10,6 +10,10 @@ inputs:
     description: "Path to the expected result file"
     required: true
     default: ""
+  output_name:
+    description: "Name of the expected result file"
+    required: true
+    default: "converted"
 outputs:
   path_to_generated_md:
     description: "The path to the generated markdown file"
@@ -20,3 +24,4 @@ runs:
   args:
     - ${{ inputs.path_to_junit_xml }}
     - ${{ inputs.output_path }}
+    - ${{ inputs.output_name }}
