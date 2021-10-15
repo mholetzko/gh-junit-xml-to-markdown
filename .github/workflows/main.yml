@@ -14,13 +14,11 @@ jobs:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
           output_name: "result_123"
-      - name: PWD
-        run: pwd
-      - name: LS -AL
-        run: ls -al
+      - name: Check outdir
+        run: ls -al ./out
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
-          path: .
+          path: ./out
         env:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GPAT_PRIVATE }}
