@@ -12,6 +12,8 @@ jobs:
         uses: ./
         with:
           path_to_junit_xml: "./data/result.xml"
+      - name: PWD
+        run: pwd
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
