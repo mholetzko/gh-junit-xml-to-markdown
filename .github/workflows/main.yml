@@ -18,10 +18,10 @@ jobs:
         run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
       # Cat the output
       - name: Cat result file
-        run: ls -al /home/runner
+        run: ls -al /home/runner/work
         # Cat the output
       - name: Cat result file
-        run: cat /home/runner/converted.md
+        run: cat /home/runner/work/converted.md
   upload-config:
     runs-on: ubuntu-latest
     name: A job to test xml2md conversion
@@ -39,7 +39,7 @@ jobs:
         run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
       # Cat the output
       - name: Cat result file
-        run: ls -al /home/runner
+        run: ls -al /home/runner/work
         # Cat the output
       - name: Cat result file
-        run: cat /home/runner/converted.md
+        run: cat /home/runner/work/converted.md
