@@ -12,6 +12,7 @@ jobs:
         uses: ./
         with:
           path_to_junit_xml: "./data/result.xml"
+          output_path: "./out"
       - name: PWD
         run: pwd
       - name: LS -AL

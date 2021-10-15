@@ -6,10 +6,10 @@ inputs:
     description: "Path to the to be converted junit xml"
     required: true
     default: ""
-  upload_to_wiki:
-    description: "Shall the action upload to the repo.wiki"
-    required: false
-    default: "false"
+  output_path:
+    description: "Path to the expected result file"
+    required: true
+    default: ""
 outputs:
   path_to_generated_md:
     description: "The path to the generated markdown file"
@@ -19,4 +19,4 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.path_to_junit_xml }}
-    - ${{ inputs.upload_to_wiki }}
+    - ${{ inputs.output_path }}
