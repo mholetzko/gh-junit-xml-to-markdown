@@ -14,8 +14,11 @@ jobs:
           path_to_junit_xml: "./data/result.xml"
           upload_to_wiki: "false"
       # Check the output
-      - name: Get the output time
+      - name: get result value
         run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
+      # Cat the output
+      - name: Cat result file
+        run: cat /app/src/${{ steps.convert.outputs.path_to_generated_md }}"
   upload-config:
     runs-on: ubuntu-latest
     name: A job to test xml2md conversion
@@ -29,5 +32,8 @@ jobs:
           path_to_junit_xml: "./data/result.xml"
           upload_to_wiki: "true"
       # Check the output
-      - name: Get the output time
+      - name: get result value
         run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
+      # Cat the output
+      - name: Cat result file
+        run: cat /app/src/${{ steps.convert.outputs.path_to_generated_md }}"
