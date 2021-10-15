@@ -6,6 +6,8 @@ RUN python -m venv env
 RUN echo "Activate venv"
 RUN source ./env/bin/activate
 RUN echo "Install requirements"
+RUN pwd
+RUN ls -al
 RUN python3 -m pip install -r ./src/requirements.txt
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
