@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to test xml2md conversion
+    steps:
+      - name: Fetch xml convert 2 md
+        id: hello
+        uses: actions/gh-junit-xml-to-markdown@v1
+        with:
+          path-to-junit-xml: "Here"
+          upload-to-wiki: "No"

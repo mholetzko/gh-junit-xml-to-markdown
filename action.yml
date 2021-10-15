@@ -1,5 +1,5 @@
 # action.yml
-name: "Hello World"
+name: "gh xml to md action"
 description: "Greet someone and record the time"
 inputs:
   path-to-junit-xml:
