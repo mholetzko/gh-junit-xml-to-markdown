@@ -2,21 +2,21 @@
 name: "gh xml to md action"
 description: "Greet someone and record the time"
 inputs:
-  path-to-junit-xml:
+  path_to_junit_xml:
     description: "Path to the to be converted junit xml"
     required: true
     default: ""
-  upload-to-wiki:
+  upload_to_wiki:
     description: "Shall the action upload to the repo.wiki"
     required: false
     default: "false"
 outputs:
-  path-to-generated-md:
+  path_to_generated_md:
     description: "The path to the generated markdown file"
 
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.path-to-junit-xml }}
-    - ${{ inputs.upload-to-wiki }}
+    - ${{ inputs.path_to_junit_xml }}
+    - ${{ inputs.upload_to_wiki }}

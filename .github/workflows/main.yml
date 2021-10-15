@@ -11,8 +11,11 @@ jobs:
         id: hello
         uses: ./
         with:
-          path-to-junit-xml: "Here"
-          upload-to-wiki: "false"
+          path_to_junit_xml: "Here"
+          upload_to_wiki: "false"
+      # Check the output
+      - name: Get the output time
+        run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
   upload-config:
     runs-on: ubuntu-latest
     name: A job to test xml2md conversion
@@ -23,8 +26,8 @@ jobs:
         id: convert
         uses: ./
         with:
-          path-to-junit-xml: "./data/result.xml"
-          upload-to-wiki: "true"
+          path_to_junit_xml: "./data/result.xml"
+          upload_to_wiki: "true"
       # Check the output
       - name: Get the output time
-        run: echo "The time was ${{ steps.convert.outputs.path-to-generated-md }}"
+        run: echo "The time was ${{ steps.convert.outputs.path_to_generated_md }}"
