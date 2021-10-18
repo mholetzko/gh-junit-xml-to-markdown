@@ -27,7 +27,7 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.path_to_junit_xml }}
-    - ${{ inputs.output_path }}
     - ${{ inputs.output_name }}
     - ${{ inputs.gh_action_url }}
+    - ${{ inputs.output_path }}
     - "/app/env"
