@@ -19,7 +19,7 @@ jobs:
 
       - name: Set success string
         if: ${{ success() }}
-        id: name
+        id: success
         run: echo "::set-output name=name::success-"
 
       - name: Fetch xml convert 2 md
