@@ -10,13 +10,24 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Set failure string
+        if: ${{ failure() }}
+        id: name
+        run: echo "::set-output name=name::failing-"
+
+      - name: Set success string
+        if: ${{ success() }}
+        id: name
+        run: echo "::set-output name=name::success-"
+
       - name: Fetch xml convert 2 md
         id: convert
         uses: mholetzko/gh-junit-xml-to-markdown@v1.1
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
-          output_name: "result_${{ steps.date.outputs.date }}"
+          output_name: "${{ steps.name.outputs.name }}${{ steps.date.outputs.date }}"
           gh_action_url: "www.google.com"
       - name: Check outdir
         run: ls -al ./out
