@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
@@ -29,8 +30,10 @@ jobs:
           output_path: "./out"
           output_name: "${{ steps.name.outputs.name }}${{ steps.date.outputs.date }}"
           gh_action_url: "www.google.com"
+
       - name: Check outdir
         run: ls -al ./out
+
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
