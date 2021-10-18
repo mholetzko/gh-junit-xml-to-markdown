@@ -23,7 +23,7 @@ jobs:
         run: echo "::set-output name=name::success-"
 
       - name: Fetch xml convert 2 md
-        id: success
+        id: convert
         uses: mholetzko/gh-junit-xml-to-markdown@v1.1
         with:
           path_to_junit_xml: "./data/result.xml"
