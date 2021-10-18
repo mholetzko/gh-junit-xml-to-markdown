@@ -14,7 +14,7 @@ FILEPATH=sys.argv[1]
 SUITENAME=sys.argv[2]
 URL=sys.argv[3]
 
-mdFile = MdUtils(file_name='converted',title=f'{SUITENAME}')
+mdFile = MdUtils(file_name='converted',title=f'Flat overview of out test result')
 
 mdFile.new_paragraph(f"Please find the detailed report here {URL}")
 # Most ugly piece of code I wrote in a while 😃
