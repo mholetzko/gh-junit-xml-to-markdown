@@ -12,7 +12,7 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Fetch xml convert 2 md
         id: convert
-        uses: ./
+        uses: mholetzko/gh-junit-xml-to-markdown@v1
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
