@@ -1,25 +1,34 @@
 #!/bin/sh -l
 
 
-echo "Received data path: $1"
-echo "Received result path: $2"
-echo "Received result name: $3"
-source /app/env/bin/activate && python3 src/convert_junit_to_md.py $1 TESTRUN-123 www.google.com
-ls -al
-pwd
+echo "Received FILEPATH: $1"
+FILEPATH=$1
+echo "Received SUITENAME: $2"
+SUITENAME=$2
+RESULT_FILENAME=$SUITENAME.md
+echo "Received DEATILS_URL: $3"
+DEATILS_URL=$3
+echo "Received RESULT_FILENAME: $RESULT_FILENAME"
+echo "Received RESULT_PATH: $4"
+RESULT_PATH=$4
+echo "Received VENV_PATH: $5"
+VENV_PATH="$5/bin/activate"
+
+echo "Convert"
+source "$VENV_PATH" && python3 src/convert_junit_to_md.py $FILEPATH $SUITENAME $DEATILS_URL
 
 echo "Print md"
 cat converted.md
 
 echo "Rename"
-mv ./converted.md ./$3
+mv ./converted.md ./$RESULT_FILENAME
 
 echo "create outdir"
-mkdir ./$2
+mkdir ./$RESULT_PATH
 
 echo "copy"
-mv ./$3 ./$2/$3
+mv ./$RESULT_FILENAME ./$RESULT_PATH/$RESULT_FILENAME 
 
-out=./$2/$3
+out=./$RESULT_PATH/$RESULT_FILENAME
 echo "::set-output name=path_to_generated_md::$out"
 

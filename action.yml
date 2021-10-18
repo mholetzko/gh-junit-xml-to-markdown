@@ -13,7 +13,11 @@ inputs:
   output_name:
     description: "Name of the expected result file"
     required: true
-    default: "converted"
+    default: "converted_result.md"
+  gh_action_url:
+    description: "URL of the current gh action run"
+    required: true
+    default: "www.google.com"
 outputs:
   path_to_generated_md:
     description: "The path to the generated markdown file"
@@ -25,3 +29,5 @@ runs:
     - ${{ inputs.path_to_junit_xml }}
     - ${{ inputs.output_path }}
     - ${{ inputs.output_name }}
+    - ${{ inputs.gh_action_url }}
+    - "/app/env"

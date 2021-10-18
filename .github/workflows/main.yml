@@ -17,6 +17,7 @@ jobs:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
           output_name: "result_${{ steps.date.outputs.date }}.md"
+          gh_action_url: "www.google.com"
       - name: Check outdir
         run: ls -al ./out
       - name: Upload Documentation to Wiki
