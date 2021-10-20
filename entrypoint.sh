@@ -21,7 +21,7 @@ echo "Inspect dir"
 ls -al .
 
 echo "Convert"
-source "$VENV_PATH" && python3 ./src/convert_junit_to_md.py $FILEPATH $SUITENAME $DEATILS_URL
+source "$VENV_PATH" && python3 /app/src/convert_junit_to_md.py $FILEPATH $SUITENAME $DEATILS_URL
 
 echo "Print md"
 cat ./converted.md
