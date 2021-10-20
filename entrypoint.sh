@@ -14,6 +14,9 @@ RESULT_PATH=$4
 echo "Received VENV_PATH: $5"
 VENV_PATH="$5/bin/activate"
 
+echo "We are in"
+pwd
+
 echo "Inspect dir"
 ls -al .
 
