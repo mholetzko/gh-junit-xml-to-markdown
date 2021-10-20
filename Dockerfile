@@ -6,7 +6,7 @@ WORKDIR /app
 COPY entrypoint.sh /app/entrypoint.sh
 
 RUN echo "Install requirements"
-COPY src/* /app/src/*
+COPY src/ /app/src/
 
 RUN echo "Create venv" \
 && python3 -m venv /app/env
