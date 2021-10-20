@@ -5,14 +5,15 @@ WORKDIR /app
 
 COPY entrypoint.sh /app/entrypoint.sh
 
-RUN echo "Create venv"
-RUN python3 -m venv env
-
 RUN echo "Install requirements"
-COPY src/requirements.txt /app/src/requirements.txt
+COPY src/* /app/src/*
 
-RUN echo "Install deps"
-RUN source /app/env/bin/activate && python3 -m pip install -r ./src/requirements.txt
+RUN echo "Create venv" \
+&& python3 -m venv /app/env
+
+RUN echo "Install deps" \
+&& source /app/env/bin/activate \
+&& python3 -m pip install -r ./src/requirements.txt --no-cache-dir
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/app/entrypoint.sh"]
