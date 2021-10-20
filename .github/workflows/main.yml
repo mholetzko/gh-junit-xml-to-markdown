@@ -24,7 +24,7 @@ jobs:
 
       - name: Fetch xml convert 2 md
         id: convert
-        uses: .
+        uses: ./
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
