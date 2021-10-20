@@ -1,8 +1,8 @@
 #!/bin/sh -l
 
 
-echo "Received FILEPATH: $1"
-FILEPATH=$1
+echo "Received FILEPATH: /github/workspace/$1"
+FILEPATH="/github/workspace/$1"
 echo "Received SUITENAME: $2"
 SUITENAME=$2
 RESULT_FILENAME=$SUITENAME.md
