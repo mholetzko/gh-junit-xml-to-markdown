@@ -14,11 +14,14 @@ RESULT_PATH=$4
 echo "Received VENV_PATH: $5"
 VENV_PATH="$5/bin/activate"
 
+echo "Inspect dir"
+ls -al .
+
 echo "Convert"
-source "$VENV_PATH" && python3 src/convert_junit_to_md.py $FILEPATH $SUITENAME $DEATILS_URL
+source "$VENV_PATH" && python3 ./src/convert_junit_to_md.py $FILEPATH $SUITENAME $DEATILS_URL
 
 echo "Print md"
-cat converted.md
+cat ./converted.md
 
 echo "Rename"
 mv ./converted.md ./$RESULT_FILENAME
