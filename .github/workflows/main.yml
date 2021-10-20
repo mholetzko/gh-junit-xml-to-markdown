@@ -24,7 +24,7 @@ jobs:
 
       - name: Fetch xml convert 2 md
         id: convert
-        uses: mholetzko/gh-junit-xml-to-markdown@v1.3
+        uses: mholetzko/gh-junit-xml-to-markdown@v1.3.2
         with:
           path_to_junit_xml: "./data/result.xml"
           output_path: "./out"
