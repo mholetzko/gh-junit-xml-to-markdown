@@ -29,7 +29,7 @@ mv ./converted.md ./$RESULT_FILENAME
 echo "create outdir"
 mkdir ./$RESULT_PATH
 
-echo "copy"
+echo "Copy"
 mv ./$RESULT_FILENAME ./$RESULT_PATH/$RESULT_FILENAME 
 
 out=./$RESULT_PATH/$RESULT_FILENAME
